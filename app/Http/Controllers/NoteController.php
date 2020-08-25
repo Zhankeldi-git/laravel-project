@@ -26,8 +26,28 @@ class NoteController extends Controller{
 	public function allNote(){
 
 		$note = new Note();
-		return view('mynotes', ['notesdate' => $note->orderBy('id', 'desc')->get()]);
+		return view('mynotes', ['notesdate' => $note->all()]);
 	}
+
+	public function deleteNote($id){
+
+		$note = new Note();
+		['notesdate' => $note->find($id)->delete()];
+
+		return redirect()->route('mynote');
+
+
+
+		
+
+		
+
+		
+	}
+
+
+
+
 
 
  }

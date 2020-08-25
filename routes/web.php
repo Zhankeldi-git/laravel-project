@@ -21,5 +21,7 @@ Route::get('/login', function () {
 Route::post('/contact/form', 'ContactController@submit')->name('formcontact');
 Route::post('/mynote/add', 'NoteController@addNote')->name('notesadd');
 Route::get('/mynote', 'NoteController@allNote')->name('mynote');
+Route::get('/mynote/{id}', 'NoteController@deleteNote')->name('mynote-delete');
+
 
 

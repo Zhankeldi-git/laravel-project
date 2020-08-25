@@ -15,6 +15,8 @@ My Notes
 			<h3>{{$elements->postsubject}}</h3>
 			<h2>{{$elements->note}}</h2>
 			<p>{{$elements->created_at}}, {{$elements->email}}</p>
+			<a href="{{route('mynote-delete', ['id' => $elements->id])}}"><button class="btn btn-danger">delete</button></a>
+
 
 
 
